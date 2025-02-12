@@ -1,20 +1,18 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import { useState } from 'react'
 function App() {
-  const  Info=<div>
-    <h3>Name: Mohammad Edris</h3>
-    <h3>LastName: Nezamy</h3>
-    <h3>Emial: mohammadedrisnezamy@gmail.com</h3>
-    
-  </div>
+    const [age,setAge]=useState(0)
+ 
   return (
-    <>
-         {Info}
+    <>  <h2>{age} </h2>
+        <button onClick={ ()=>setAge(age-1) } style={{backgroundColor:"Red",color:'white'}}> Decrese Age </button>
+        <button onClick={()=>setAge(age+1)} style={{backgroundColor:"Green",color:"white"}}> Increse Age </button>
     </>
   )
 }
 
-export default App
+
+export default App;
